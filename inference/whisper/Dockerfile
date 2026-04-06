@@ -9,6 +9,7 @@ RUN apt-get update && \
     build-essential \
     ca-certificates \
     curl \
+    python3-setuptools \
     && if ! command -v python3 >/dev/null 2>&1; then \
         apt-get install -y --no-install-recommends python3 python3-pip; \
     fi \
@@ -18,8 +19,8 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 RUN --mount=type=cache,target=/root/.cache/pip \
-    python3 -m pip install --upgrade pip setuptools wheel \
-    && python3 -m pip install vox-box
+    python3 -m pip install --upgrade pip "setuptools<82.0.0" wheel \
+    && python3 -m pip install --no-build-isolation vox-box
 
 WORKDIR /app
 

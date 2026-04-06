@@ -13,14 +13,14 @@ services:
   nemotron:
     build:
       args:
-        NEMOTRON_BASE: ${NEMOTRON_BASE:-nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04}
-        TORCH_INDEX_URL: ${NEMOTRON_TORCH_INDEX_URL:-https://download.pytorch.org/whl/cu124}
+        NEMOTRON_BASE: ${NEMOTRON_BASE:-nvidia/cuda:12.8.0-cudnn-runtime-ubuntu22.04}
+        TORCH_INDEX_URL: ${NEMOTRON_TORCH_INDEX_URL:-https://download.pytorch.org/whl/cu128}
     gpus: all
 
   whisper:
     build:
       args:
-        WHISPER_BASE: ${WHISPER_BASE:-nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04}
+        WHISPER_BASE: ${WHISPER_BASE:-nvidia/cuda:12.8.0-cudnn-runtime-ubuntu22.04}
     gpus: all
     environment:
       - VOXBOX_DEVICE=${VOXBOX_DEVICE:-cuda:0}
