@@ -61,13 +61,9 @@ async def my_agent(ctx: JobContext):
     llama_model = os.getenv("LLAMA_MODEL", "qwen3-4b")
     llama_base_url = os.getenv("LLAMA_BASE_URL", "http://llama_cpp:11434/v1")
 
-    stt_provider = os.getenv("STT_PROVIDER", "nemotron").lower()
-    if stt_provider == "whisper":
-        default_stt_base_url = "http://whisper:80/v1"
-        default_stt_model = "Systran/faster-whisper-small"
-    else:
-        default_stt_base_url = "http://nemotron:8000/v1"
-        default_stt_model = "nemotron-speech-streaming"
+    stt_provider = os.getenv("STT_PROVIDER", "whisper").lower()
+    default_stt_base_url = "http://whisper:80/v1"
+    default_stt_model = "Systran/faster-whisper-small"
 
     stt_base_url = os.getenv("STT_BASE_URL", default_stt_base_url)
     stt_model = os.getenv("STT_MODEL", default_stt_model)
@@ -97,7 +93,7 @@ async def my_agent(ctx: JobContext):
             base_url="http://kokoro:8880/v1",
             # base_url="http://localhost:8880/v1", # uncomment for local testing
             model="kokoro",
-            voice="af_nova",
+            voice="zf_xiaobei",
             api_key="no-key-needed"
         ),
         turn_detection=MultilingualModel(),

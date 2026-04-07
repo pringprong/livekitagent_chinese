@@ -2,6 +2,8 @@ services:
   kokoro:
     build:
       context: ./inference/kokoro
+      args:
+        KOKORO_BASE: python:3.10-slim
     ports:
       - "8880:8880"
     networks:
@@ -16,28 +18,6 @@ services:
     networks:
       - agent_network
 
-  nemotron:
-    build:
-      context: ./inference/nemotron
-      args:
-        NEMOTRON_BASE: ${NEMOTRON_BASE:-python:3.10-slim}
-        TORCH_INDEX_URL: ${NEMOTRON_TORCH_INDEX_URL:-https://download.pytorch.org/whl/cpu}
-    volumes:
-      - nemotron-cache:/root/.cache/huggingface
-    environment:
-      - NEMOTRON_MODEL_NAME=${NEMOTRON_MODEL_NAME:-nvidia/nemotron-speech-streaming-en-0.6b}
-      - NEMOTRON_MODEL_ID=${NEMOTRON_MODEL_ID:-nemotron-speech-streaming}
-      - PYTORCH_ENABLE_MPS_FALLBACK=1
-    ports:
-      - "11435:8000"
-    healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health | grep -q '\"model_loaded\":true'"]
-      interval: 10s
-      timeout: 5s
-      retries: 120
-      start_period: 20s
-    networks:
-      - agent_network
 
   whisper:
     profiles: ["whisper"]
@@ -101,8 +81,6 @@ services:
         condition: service_started
       kokoro:
         condition: service_started
-      nemotron:
-        condition: service_healthy
       llama_cpp:
         condition: service_healthy
     healthcheck:
@@ -131,7 +109,6 @@ services:
       - agent_network
 
 volumes:
-  nemotron-cache:
   whisper-data:
 
 networks:
