@@ -15,6 +15,7 @@ from livekit.agents import (
 )
 from livekit.plugins import silero, openai
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
+from datetime import datetime
 
 logger = logging.getLogger("agent")
 
@@ -28,6 +29,12 @@ class Assistant(Agent):
             Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
             You are curious, friendly, and have a sense of humor.""",
         )
+
+    @function_tool()
+    async def get_current_date_and_time(self, context: RunContext) -> str:
+        """Get the current date and time."""
+        return f"The current date and time is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}."    
+    
 
     @function_tool()
     async def multiply_numbers(
@@ -63,7 +70,7 @@ async def my_agent(ctx: JobContext):
 
     stt_provider = os.getenv("STT_PROVIDER", "whisper").lower()
     default_stt_base_url = "http://whisper:80/v1"
-    default_stt_model = "Systran/faster-whisper-small"
+    default_stt_model = "Systran/faster-whisper-large-v3"
 
     stt_base_url = os.getenv("STT_BASE_URL", default_stt_base_url)
     stt_model = os.getenv("STT_MODEL", default_stt_model)

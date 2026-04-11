@@ -26,4 +26,4 @@ WORKDIR /app
 
 ENV DATA_DIR=/data
 
-CMD ["sh", "-c", "vox-box start --huggingface-repo-id ${VOXBOX_HF_REPO_ID:-Systran/faster-whisper-small} --data-dir ${DATA_DIR} --device ${VOXBOX_DEVICE:-cpu}"]
+CMD ["sh", "-c", "vox-box start --huggingface-repo-id ${VOXBOX_HF_REPO_ID:-Systran/faster-whisper-large-v3} --data-dir ${DATA_DIR} --device ${VOXBOX_DEVICE:-cpu}"]

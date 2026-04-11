@@ -126,7 +126,7 @@ When using Whisper fallback, set:
 
 - `STT_PROVIDER=whisper`
 - `STT_BASE_URL=http://whisper:80/v1`
-- `STT_MODEL=Systran/faster-whisper-small` (or your preferred VoxBox model)
+- `STT_MODEL=Systran/faster-whisper-large-v3` (or your preferred VoxBox model)
 
 ## Development
 
