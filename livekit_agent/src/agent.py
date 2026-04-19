@@ -23,11 +23,15 @@ load_dotenv(".env.local")
 
 class Assistant(Agent):
     def __init__(self) -> None:
+        self.language: str = "en"  # Default language is English
         super().__init__(
             instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
             You eagerly assist users with their questions by providing information from your extensive knowledge.
             Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, and have a sense of humor.""",
+            You are curious, friendly, and have a sense of humor.
+            
+            Available language codes: en (English), zh (Chinese).
+            You can change the language by saying "English" or "英文" for English, or "Chinese" or "中文" for Chinese.""",
         )
 
     @function_tool()
@@ -51,6 +55,30 @@ class Assistant(Agent):
         """
 
         return f"The product of {number1} and {number2} is {number1 * number2}."
+
+    @function_tool()
+    async def set_language(
+        self,
+        context: RunContext,
+        language: str,
+    ) -> str:
+        """Set the language for speech recognition.
+        
+        Args:
+            language: The language code to set. Use "en" for English or "zh" for Chinese.
+        """
+        # Update the agent's language
+        self.language = language
+        
+        # Update the STT language dynamically
+        session = context.agent.session
+        if session and hasattr(session, '_stt') and session._stt:
+            stt = session._stt
+            if hasattr(stt, 'update_options'):
+                stt.update_options(language=language)
+        
+        language_name = "English" if language == "en" else "Chinese"
+        return f"Language set to {language_name} ({language})."
 
 server = AgentServer()
 
@@ -88,6 +116,8 @@ async def my_agent(ctx: JobContext):
             base_url=stt_base_url,
             # base_url="http://localhost:11435/v1", # uncomment for local testing
             model=stt_model,
+            language="en",  # Default language
+            detect_language=False,  # Disable automatic detection, use the language variable
             api_key=stt_api_key
         ),
         llm=openai.LLM(
@@ -100,12 +130,12 @@ async def my_agent(ctx: JobContext):
             base_url="http://kokoro:8880/v1",
             # base_url="http://localhost:8880/v1", # uncomment for local testing
             model="kokoro",
-            voice="zf_xiaobei",
+            voice="af_heart",
             api_key="no-key-needed"
         ),
         turn_detection=MultilingualModel(),
         vad=ctx.proc.userdata["vad"],
-        preemptive_generation=True,
+        preemptive_generation=False,
     )
 
     await session.start(

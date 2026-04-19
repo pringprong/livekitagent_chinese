@@ -1,0 +1,1009 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fgpustack%2Fvox-box
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=gpustack%2Fvox-box
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - link "gpustack" [ref=e70] [cursor=pointer]:
+            - /url: /gpustack
+          - generic [ref=e71]: /
+          - strong [ref=e72]:
+            - link "vox-box" [ref=e73] [cursor=pointer]:
+              - /url: /gpustack/vox-box
+          - generic [ref=e74]: Public
+        - generic [ref=e75]:
+          - list:
+            - listitem [ref=e76]:
+              - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                - /url: /login?return_to=%2Fgpustack%2Fvox-box
+                - img [ref=e78]
+                - text: Notifications
+            - listitem [ref=e80]:
+              - link "Fork 33" [ref=e81] [cursor=pointer]:
+                - /url: /login?return_to=%2Fgpustack%2Fvox-box
+                - img [ref=e82]
+                - text: Fork
+                - generic "33" [ref=e84]
+            - listitem [ref=e85]:
+              - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2Fgpustack%2Fvox-box
+                - img [ref=e88]
+                - text: Star
+                - generic "206 users starred this repository" [ref=e90]: "206"
+      - navigation "Repository" [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Code" [ref=e94] [cursor=pointer]:
+              - /url: /gpustack/vox-box
+              - img [ref=e95]
+              - generic [ref=e97]: Code
+          - listitem [ref=e98]:
+            - link "Issues 16" [ref=e99] [cursor=pointer]:
+              - /url: /gpustack/vox-box/issues
+              - img [ref=e100]
+              - generic [ref=e103]: Issues
+              - generic "16" [ref=e104]
+          - listitem [ref=e105]:
+            - link "Pull requests 2" [ref=e106] [cursor=pointer]:
+              - /url: /gpustack/vox-box/pulls
+              - img [ref=e107]
+              - generic [ref=e109]: Pull requests
+              - generic "2" [ref=e110]
+          - listitem [ref=e111]:
+            - link "Actions" [ref=e112] [cursor=pointer]:
+              - /url: /gpustack/vox-box/actions
+              - img [ref=e113]
+              - generic [ref=e115]: Actions
+          - listitem [ref=e116]:
+            - link "Projects" [ref=e117] [cursor=pointer]:
+              - /url: /gpustack/vox-box/projects
+              - img [ref=e118]
+              - generic [ref=e120]: Projects
+          - listitem [ref=e121]:
+            - link "Security and quality" [ref=e122] [cursor=pointer]:
+              - /url: /gpustack/vox-box/security
+              - img [ref=e123]
+              - generic [ref=e125]: Security and quality
+          - listitem [ref=e126]:
+            - link "Insights" [ref=e127] [cursor=pointer]:
+              - /url: /gpustack/vox-box/pulse
+              - img [ref=e128]
+              - generic [ref=e130]: Insights
+    - generic [ref=e143]:
+      - heading "gpustack/vox-box" [level=1] [ref=e145]
+      - generic [ref=e146]:
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - button "main branch" [ref=e153] [cursor=pointer]:
+                - generic [ref=e154]:
+                  - generic [ref=e156]:
+                    - img [ref=e158]
+                    - generic [ref=e161]: main
+                  - generic:
+                    - img
+              - generic [ref=e162]:
+                - link "1 Branch" [ref=e163] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/branches
+                  - generic [ref=e164]:
+                    - generic:
+                      - img
+                    - generic [ref=e166]:
+                      - strong [ref=e167]: "1"
+                      - text: Branch
+                - link "21 Tags" [ref=e168] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/tags
+                  - generic [ref=e169]:
+                    - generic:
+                      - img
+                    - generic [ref=e171]:
+                      - strong [ref=e172]: "21"
+                      - text: Tags
+            - generic [ref=e173]:
+              - generic [ref=e177]:
+                - img [ref=e179]
+                - combobox "Go to file" [ref=e181]
+              - button "Code" [ref=e182] [cursor=pointer]:
+                - generic [ref=e183]:
+                  - generic:
+                    - img
+                  - generic [ref=e184]: Code
+                  - generic:
+                    - img
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - heading "Folders and files" [level=2] [ref=e187]
+              - table "Folders and files" [ref=e188]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e189]:
+                  - 'row "Latest commit lemisky aiwantaozi commits by lemisky and commits by aiwantaozi feat(stt): Enhance audio format compatibility with filename fallback success Commit c5d4c15 · Dec 2, 20254 months ago History 80 Commits" [ref=e190]':
+                    - 'cell "Latest commit lemisky aiwantaozi commits by lemisky and commits by aiwantaozi feat(stt): Enhance audio format compatibility with filename fallback success Commit c5d4c15 · Dec 2, 20254 months ago History 80 Commits" [ref=e191]':
+                      - generic [ref=e192]:
+                        - heading "Latest commit" [level=2] [ref=e193]
+                        - generic [ref=e194]:
+                          - generic [ref=e195]:
+                            - generic [ref=e197]:
+                              - img "lemisky" [ref=e198]
+                              - img "aiwantaozi" [ref=e199]
+                            - link "commits by lemisky" [ref=e201] [cursor=pointer]:
+                              - /url: /gpustack/vox-box/commits?author=lemisky
+                              - text: lemisky
+                            - generic [ref=e202]: and
+                            - link "commits by aiwantaozi" [ref=e204] [cursor=pointer]:
+                              - /url: /gpustack/vox-box/commits?author=aiwantaozi
+                              - text: aiwantaozi
+                          - generic [ref=e205]:
+                            - 'link "feat(stt): Enhance audio format compatibility with filename fallback" [ref=e208] [cursor=pointer]':
+                              - /url: /gpustack/vox-box/commit/c5d4c154177acbae752ccf8bc4d7cd409c140ddc
+                            - button "success" [ref=e209] [cursor=pointer]:
+                              - img [ref=e210]
+                        - generic [ref=e212]:
+                          - generic [ref=e214]:
+                            - link "Commit c5d4c15" [ref=e215] [cursor=pointer]:
+                              - /url: /gpustack/vox-box/commit/c5d4c154177acbae752ccf8bc4d7cd409c140ddc
+                              - text: c5d4c15
+                            - text: ·
+                            - generic "Dec 2, 2025, 5:12 PM GMT+8" [ref=e216]: Dec 2, 20254 months ago
+                          - generic [ref=e217]:
+                            - heading "History" [level=2] [ref=e218]
+                            - link "80 Commits" [ref=e219] [cursor=pointer]:
+                              - /url: /gpustack/vox-box/commits/main/
+                              - generic [ref=e220]:
+                                - generic:
+                                  - img
+                                - generic [ref=e221]: 80 Commits
+                  - 'row ".github/workflows, (Directory) chore: update ci to remove draft from release Dec 26, 20242 years ago" [ref=e222]':
+                    - cell ".github/workflows, (Directory)" [ref=e223]:
+                      - generic [ref=e224]:
+                        - img [ref=e225]
+                        - link ".github/workflows, (Directory)" [ref=e230] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/tree/main/.github/workflows
+                          - text: .github/workflows
+                    - 'cell "chore: update ci to remove draft from release" [ref=e231]':
+                      - 'link "chore: update ci to remove draft from release" [ref=e234] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/81603355819bfde046911742ae8a3fa9bef2423a
+                    - cell "Dec 26, 20242 years ago" [ref=e235]:
+                      - generic [ref=e236]: Dec 26, 20242 years ago
+                  - 'row "hack, (Directory) chore: update version format Nov 28, 20242 years ago" [ref=e237]':
+                    - cell "hack, (Directory)" [ref=e238]:
+                      - generic [ref=e239]:
+                        - img [ref=e240]
+                        - link "hack, (Directory)" [ref=e245] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/tree/main/hack
+                          - text: hack
+                    - 'cell "chore: update version format" [ref=e246]':
+                      - 'link "chore: update version format" [ref=e249] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/208963c4670701827f48fe4495949251f64c0843
+                    - cell "Nov 28, 20242 years ago" [ref=e250]:
+                      - generic [ref=e251]: Nov 28, 20242 years ago
+                  - 'row "vox_box, (Directory) feat(stt): Enhance audio format compatibility with filename fallback Dec 2, 20254 months ago" [ref=e252]':
+                    - cell "vox_box, (Directory)" [ref=e253]:
+                      - generic [ref=e254]:
+                        - img [ref=e255]
+                        - link "vox_box, (Directory)" [ref=e260] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/tree/main/vox_box
+                          - text: vox_box
+                    - 'cell "feat(stt): Enhance audio format compatibility with filename fallback" [ref=e261]':
+                      - 'link "feat(stt): Enhance audio format compatibility with filename fallback" [ref=e264] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/c5d4c154177acbae752ccf8bc4d7cd409c140ddc
+                    - cell "Dec 2, 20254 months ago" [ref=e265]:
+                      - generic [ref=e266]: Dec 2, 20254 months ago
+                  - 'row ".flake8, (File) refactor: rename speech-box to vox-box Nov 22, 20242 years ago" [ref=e267]':
+                    - cell ".flake8, (File)" [ref=e268]:
+                      - generic [ref=e269]:
+                        - img [ref=e270]
+                        - link ".flake8, (File)" [ref=e275] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/.flake8
+                          - text: .flake8
+                    - 'cell "refactor: rename speech-box to vox-box" [ref=e276]':
+                      - 'link "refactor: rename speech-box to vox-box" [ref=e279] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/ed7bdda0001e231724c5af40bc329137e7ca7e2e
+                    - cell "Nov 22, 20242 years ago" [ref=e280]:
+                      - generic [ref=e281]: Nov 22, 20242 years ago
+                  - row ".gitignore, (File) init project Nov 19, 20242 years ago" [ref=e282]:
+                    - cell ".gitignore, (File)" [ref=e283]:
+                      - generic [ref=e284]:
+                        - img [ref=e285]
+                        - link ".gitignore, (File)" [ref=e290] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/.gitignore
+                          - text: .gitignore
+                    - cell "init project" [ref=e291]:
+                      - link "init project" [ref=e294] [cursor=pointer]:
+                        - /url: /gpustack/vox-box/commit/8d3d2a620b6e4b51c58909b9315a361045110b82
+                    - cell "Nov 19, 20242 years ago" [ref=e295]:
+                      - generic [ref=e296]: Nov 19, 20242 years ago
+                  - 'row ".gitmodules, (File) feat: support Dia TTS May 14, 202511 months ago" [ref=e297]':
+                    - cell ".gitmodules, (File)" [ref=e298]:
+                      - generic [ref=e299]:
+                        - img [ref=e300]
+                        - link ".gitmodules, (File)" [ref=e305] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/.gitmodules
+                          - text: .gitmodules
+                    - 'cell "feat: support Dia TTS" [ref=e306]':
+                      - 'link "feat: support Dia TTS" [ref=e309] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/10c324626cc6f31dddfa7c5896c27845c32ccd5f
+                    - cell "May 14, 202511 months ago" [ref=e310]:
+                      - generic [ref=e311]: May 14, 202511 months ago
+                  - row ".pre-commit-config.yaml, (File) init project Nov 19, 20242 years ago" [ref=e312]:
+                    - cell ".pre-commit-config.yaml, (File)" [ref=e313]:
+                      - generic [ref=e314]:
+                        - img [ref=e315]
+                        - link ".pre-commit-config.yaml, (File)" [ref=e320] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/.pre-commit-config.yaml
+                          - text: .pre-commit-config.yaml
+                    - cell "init project" [ref=e321]:
+                      - link "init project" [ref=e324] [cursor=pointer]:
+                        - /url: /gpustack/vox-box/commit/8d3d2a620b6e4b51c58909b9315a361045110b82
+                    - cell "Nov 19, 20242 years ago" [ref=e325]:
+                      - generic [ref=e326]: Nov 19, 20242 years ago
+                  - 'row "LICENSE, (File) chore: add license Nov 22, 20242 years ago" [ref=e327]':
+                    - cell "LICENSE, (File)" [ref=e328]:
+                      - generic [ref=e329]:
+                        - img [ref=e330]
+                        - link "LICENSE, (File)" [ref=e335] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/LICENSE
+                          - text: LICENSE
+                    - 'cell "chore: add license" [ref=e336]':
+                      - 'link "chore: add license" [ref=e339] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/8df8f73d6fa7956fc1ac3b190ecb2f667812fd6c
+                    - cell "Nov 22, 20242 years ago" [ref=e340]:
+                      - generic [ref=e341]: Nov 22, 20242 years ago
+                  - row "Makefile, (File) init project Nov 19, 20242 years ago" [ref=e342]:
+                    - cell "Makefile, (File)" [ref=e343]:
+                      - generic [ref=e344]:
+                        - img [ref=e345]
+                        - link "Makefile, (File)" [ref=e350] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/Makefile
+                          - text: Makefile
+                    - cell "init project" [ref=e351]:
+                      - link "init project" [ref=e354] [cursor=pointer]:
+                        - /url: /gpustack/vox-box/commit/8d3d2a620b6e4b51c58909b9315a361045110b82
+                    - cell "Nov 19, 20242 years ago" [ref=e355]:
+                      - generic [ref=e356]: Nov 19, 20242 years ago
+                  - 'row "README.md, (File) feat: support Dia TTS May 14, 202511 months ago" [ref=e357]':
+                    - cell "README.md, (File)" [ref=e358]:
+                      - generic [ref=e359]:
+                        - img [ref=e360]
+                        - link "README.md, (File)" [ref=e365] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/README.md
+                          - text: README.md
+                    - 'cell "feat: support Dia TTS" [ref=e366]':
+                      - 'link "feat: support Dia TTS" [ref=e369] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/10c324626cc6f31dddfa7c5896c27845c32ccd5f
+                    - cell "May 14, 202511 months ago" [ref=e370]:
+                      - generic [ref=e371]: May 14, 202511 months ago
+                  - 'row "poetry.lock, (File) chore: update httpx version Jun 8, 202510 months ago" [ref=e372]':
+                    - cell "poetry.lock, (File)" [ref=e373]:
+                      - generic [ref=e374]:
+                        - img [ref=e375]
+                        - link "poetry.lock, (File)" [ref=e380] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/poetry.lock
+                          - text: poetry.lock
+                    - 'cell "chore: update httpx version" [ref=e381]':
+                      - 'link "chore: update httpx version" [ref=e384] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/04f4d9eca284fa16fc40f54fcd5f5b735eae2bac
+                    - cell "Jun 8, 202510 months ago" [ref=e385]:
+                      - generic [ref=e386]: Jun 8, 202510 months ago
+                  - 'row "pyproject.toml, (File) chore: update httpx version Jun 8, 202510 months ago" [ref=e387]':
+                    - cell "pyproject.toml, (File)" [ref=e388]:
+                      - generic [ref=e389]:
+                        - img [ref=e390]
+                        - link "pyproject.toml, (File)" [ref=e395] [cursor=pointer]:
+                          - /url: /gpustack/vox-box/blob/main/pyproject.toml
+                          - text: pyproject.toml
+                    - 'cell "chore: update httpx version" [ref=e396]':
+                      - 'link "chore: update httpx version" [ref=e399] [cursor=pointer]':
+                        - /url: /gpustack/vox-box/commit/04f4d9eca284fa16fc40f54fcd5f5b735eae2bac
+                    - cell "Jun 8, 202510 months ago" [ref=e400]:
+                      - generic [ref=e401]: Jun 8, 202510 months ago
+            - generic [ref=e403]:
+              - generic [ref=e404]:
+                - heading "Repository files navigation" [level=2] [ref=e405]
+                - navigation "Repository files" [ref=e406]:
+                  - list [ref=e407]:
+                    - listitem [ref=e408]:
+                      - link "README" [ref=e409] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e411]
+                        - generic [ref=e413]: README
+                    - listitem [ref=e414]:
+                      - link "Code of conduct" [ref=e415] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e417]
+                        - generic [ref=e419]: Code of conduct
+                    - listitem [ref=e420]:
+                      - link "Contributing" [ref=e421] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e423]
+                        - generic [ref=e425]: Contributing
+                    - listitem [ref=e426]:
+                      - link "Apache-2.0 license" [ref=e427] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e429]
+                        - generic [ref=e431]: Apache-2.0 license
+                    - listitem [ref=e432]:
+                      - link "Security" [ref=e433] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e435]
+                        - generic [ref=e437]: Security
+                - button "Outline" [ref=e438] [cursor=pointer]:
+                  - img [ref=e439]
+              - article [ref=e442]:
+                - generic [ref=e443]:
+                  - heading "Vox Box" [level=1] [ref=e444]
+                  - 'link "Permalink: Vox Box" [ref=e445] [cursor=pointer]':
+                    - /url: "#vox-box"
+                    - img [ref=e446]
+                - paragraph [ref=e448]: A text-to-speech and speech-to-text server compatible with the OpenAI API, powered by backend support from Whisper, FunASR, Bark, Dia and CosyVoice.
+                - generic [ref=e449]:
+                  - heading "Requirements" [level=2] [ref=e450]
+                  - 'link "Permalink: Requirements" [ref=e451] [cursor=pointer]':
+                    - /url: "#requirements"
+                    - img [ref=e452]
+                - list [ref=e454]:
+                  - listitem [ref=e455]: Python 3.10 or greater
+                  - listitem [ref=e456]:
+                    - text: "Support Nvidia GPU, requires the following NVIDIA libraries to be installed:"
+                    - list [ref=e457]:
+                      - listitem [ref=e458]:
+                        - link "cuBLAS for CUDA 12" [ref=e459] [cursor=pointer]:
+                          - /url: https://developer.nvidia.com/cublas
+                      - listitem [ref=e460]:
+                        - link "cuDNN 9 for CUDA 12" [ref=e461] [cursor=pointer]:
+                          - /url: https://developer.nvidia.com/cudnn
+                - generic [ref=e462]:
+                  - heading "Installation" [level=2] [ref=e463]
+                  - 'link "Permalink: Installation" [ref=e464] [cursor=pointer]':
+                    - /url: "#installation"
+                    - img [ref=e465]
+                - paragraph [ref=e467]: "You can install the project using pip:"
+                - generic [ref=e468]:
+                  - generic [ref=e469]:
+                    - text: pip install vox-box
+                    - generic [ref=e470]: "# For MacOS, you need to manually install `openfst`, `pynini`, and `wetextprocessing` after installing `vox-box` to make `cosyvoice` work:"
+                    - text: brew install openfst export CPLUS_INCLUDE_PATH=
+                    - generic [ref=e471]: $(brew --prefix openfst)
+                    - text: /include export LIBRARY_PATH=
+                    - generic [ref=e472]: $(brew --prefix openfst)
+                    - text: /lib pip install pynini==2.1.6 pip install wetextprocessing==1.0.4.1
+                  - button "Copy" [ref=e474] [cursor=pointer]:
+                    - img [ref=e475]
+                - generic [ref=e478]:
+                  - heading "Usage" [level=2] [ref=e479]
+                  - 'link "Permalink: Usage" [ref=e480] [cursor=pointer]':
+                    - /url: "#usage"
+                    - img [ref=e481]
+                - generic [ref=e483]:
+                  - generic [ref=e484]:
+                    - text: vox-box start --huggingface-repo-id Systran/faster-whisper-small --data-dir ./cache/data-dir --host 0.0.0.0 --port 80
+                    - generic [ref=e485]: "# Windows"
+                    - text: vox-box start --huggingface-repo-id Systran/faster-whisper-small --data-dir C:\Users\michelia\AppData\Roaming\vox-box --host 0.0.0.0 --port 8082
+                  - button "Copy" [ref=e487] [cursor=pointer]:
+                    - img [ref=e488]
+                - generic [ref=e491]:
+                  - heading "Options" [level=3] [ref=e492]
+                  - 'link "Permalink: Options" [ref=e493] [cursor=pointer]':
+                    - /url: "#options"
+                    - img [ref=e494]
+                - list [ref=e496]:
+                  - listitem [ref=e497]: "-d, --debug: Enable debug mode."
+                  - listitem [ref=e498]: "--host: Host to bind the server to. Default is 0.0.0.0."
+                  - listitem [ref=e499]: "--port: Port to bind the server to. Default is 80."
+                  - listitem [ref=e500]: "--model: model path."
+                  - listitem [ref=e501]: "--device: Binding device, e.g., cuda:0. Default is cpu."
+                  - listitem [ref=e502]: "--huggingface-repo-id: Huggingface repo id for the model."
+                  - listitem [ref=e503]: "--model-scope-model-id: Model scope model id for the model."
+                  - listitem [ref=e504]: "--data-dir: Directory to store downloaded model data. Default is OS specific."
+                - generic [ref=e505]:
+                  - heading "Supported Models" [level=2] [ref=e506]
+                  - 'link "Permalink: Supported Models" [ref=e507] [cursor=pointer]':
+                    - /url: "#supported-models"
+                    - img [ref=e508]
+                - table [ref=e511]:
+                  - rowgroup [ref=e512]:
+                    - row "Model Type Link Verified Platforms" [ref=e513]:
+                      - columnheader "Model" [ref=e514]
+                      - columnheader "Type" [ref=e515]
+                      - columnheader "Link" [ref=e516]
+                      - columnheader "Verified Platforms" [ref=e517]
+                  - rowgroup [ref=e518]:
+                    - row "Faster-whisper-large-v3 speech-to-text Hugging Face, ModelScope Linux ✅, Windows ✅, MacOS ✅" [ref=e519]:
+                      - cell "Faster-whisper-large-v3" [ref=e520]
+                      - cell "speech-to-text" [ref=e521]
+                      - cell "Hugging Face, ModelScope" [ref=e522]:
+                        - link "Hugging Face" [ref=e523] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-large-v3
+                        - text: ","
+                        - link "ModelScope" [ref=e524] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-large-v3
+                      - cell "Linux ✅, Windows ✅, MacOS ✅" [ref=e525]
+                    - row "Faster-whisper-large-v2 speech-to-text Hugging Face, ModelScope Linux ✅, Windows ✅, MacOS ✅" [ref=e526]:
+                      - cell "Faster-whisper-large-v2" [ref=e527]
+                      - cell "speech-to-text" [ref=e528]
+                      - cell "Hugging Face, ModelScope" [ref=e529]:
+                        - link "Hugging Face" [ref=e530] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-large-v2
+                        - text: ","
+                        - link "ModelScope" [ref=e531] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-large-v2
+                      - cell "Linux ✅, Windows ✅, MacOS ✅" [ref=e532]
+                    - row "Faster-whisper-large-v1 speech-to-text Hugging Face, ModelScope" [ref=e533]:
+                      - cell "Faster-whisper-large-v1" [ref=e534]
+                      - cell "speech-to-text" [ref=e535]
+                      - cell "Hugging Face, ModelScope" [ref=e536]:
+                        - link "Hugging Face" [ref=e537] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-large-v1
+                        - text: ","
+                        - link "ModelScope" [ref=e538] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-large-v1
+                      - cell [ref=e539]
+                    - row "Faster-whisper-medium speech-to-text Hugging Face, ModelScope Linux ✅, Windows ✅, MacOS ✅" [ref=e540]:
+                      - cell "Faster-whisper-medium" [ref=e541]
+                      - cell "speech-to-text" [ref=e542]
+                      - cell "Hugging Face, ModelScope" [ref=e543]:
+                        - link "Hugging Face" [ref=e544] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-medium
+                        - text: ","
+                        - link "ModelScope" [ref=e545] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-medium
+                      - cell "Linux ✅, Windows ✅, MacOS ✅" [ref=e546]
+                    - row "Faster-whisper-medium.en speech-to-text Hugging Face, ModelScope" [ref=e547]:
+                      - cell "Faster-whisper-medium.en" [ref=e548]
+                      - cell "speech-to-text" [ref=e549]
+                      - cell "Hugging Face, ModelScope" [ref=e550]:
+                        - link "Hugging Face" [ref=e551] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-medium.en
+                        - text: ","
+                        - link "ModelScope" [ref=e552] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-medium.en
+                      - cell [ref=e553]
+                    - row "Faster-whisper-small speech-to-text Hugging Face, ModelScope Linux ✅, Windows ✅, MacOS ✅" [ref=e554]:
+                      - cell "Faster-whisper-small" [ref=e555]
+                      - cell "speech-to-text" [ref=e556]
+                      - cell "Hugging Face, ModelScope" [ref=e557]:
+                        - link "Hugging Face" [ref=e558] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-small
+                        - text: ","
+                        - link "ModelScope" [ref=e559] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-small
+                      - cell "Linux ✅, Windows ✅, MacOS ✅" [ref=e560]
+                    - row "Faster-whisper-small.en speech-to-text Hugging Face, ModelScope" [ref=e561]:
+                      - cell "Faster-whisper-small.en" [ref=e562]
+                      - cell "speech-to-text" [ref=e563]
+                      - cell "Hugging Face, ModelScope" [ref=e564]:
+                        - link "Hugging Face" [ref=e565] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-small.en
+                        - text: ","
+                        - link "ModelScope" [ref=e566] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-small.en
+                      - cell [ref=e567]
+                    - row "Faster-distil-whisper-large-v3 speech-to-text Hugging Face, ModelScope MacOS ✅" [ref=e568]:
+                      - cell "Faster-distil-whisper-large-v3" [ref=e569]
+                      - cell "speech-to-text" [ref=e570]
+                      - cell "Hugging Face, ModelScope" [ref=e571]:
+                        - link "Hugging Face" [ref=e572] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-distil-whisper-large-v3
+                        - text: ","
+                        - link "ModelScope" [ref=e573] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-distil-whisper-large-v3
+                      - cell "MacOS ✅" [ref=e574]
+                    - row "Faster-distil-whisper-large-v2 speech-to-text Hugging Face, ModelScope MacOS ✅" [ref=e575]:
+                      - cell "Faster-distil-whisper-large-v2" [ref=e576]
+                      - cell "speech-to-text" [ref=e577]
+                      - cell "Hugging Face, ModelScope" [ref=e578]:
+                        - link "Hugging Face" [ref=e579] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-distil-whisper-large-v2
+                        - text: ","
+                        - link "ModelScope" [ref=e580] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-distil-whisper-large-v2
+                      - cell "MacOS ✅" [ref=e581]
+                    - row "Faster-distil-whisper-medium.en speech-to-text Hugging Face, ModelScope" [ref=e582]:
+                      - cell "Faster-distil-whisper-medium.en" [ref=e583]
+                      - cell "speech-to-text" [ref=e584]
+                      - cell "Hugging Face, ModelScope" [ref=e585]:
+                        - link "Hugging Face" [ref=e586] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-distil-whisper-medium.en
+                        - text: ","
+                        - link "ModelScope" [ref=e587] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-distil-whisper-medium.en
+                      - cell [ref=e588]
+                    - row "Faster-whisper-tiny speech-to-text Hugging Face, ModelScope" [ref=e589]:
+                      - cell "Faster-whisper-tiny" [ref=e590]
+                      - cell "speech-to-text" [ref=e591]
+                      - cell "Hugging Face, ModelScope" [ref=e592]:
+                        - link "Hugging Face" [ref=e593] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-tiny
+                        - text: ","
+                        - link "ModelScope" [ref=e594] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-tiny
+                      - cell [ref=e595]
+                    - row "Faster-whisper-tiny.en speech-to-text Hugging Face, ModelScope" [ref=e596]:
+                      - cell "Faster-whisper-tiny.en" [ref=e597]
+                      - cell "speech-to-text" [ref=e598]
+                      - cell "Hugging Face, ModelScope" [ref=e599]:
+                        - link "Hugging Face" [ref=e600] [cursor=pointer]:
+                          - /url: https://huggingface.co/Systran/faster-whisper-tiny.en
+                        - text: ","
+                        - link "ModelScope" [ref=e601] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/gpustack/faster-whisper-tiny.en
+                      - cell [ref=e602]
+                    - row "Paraformer-zh speech-to-text Hugging Face, ModelScope" [ref=e603]:
+                      - cell "Paraformer-zh" [ref=e604]
+                      - cell "speech-to-text" [ref=e605]
+                      - cell "Hugging Face, ModelScope" [ref=e606]:
+                        - link "Hugging Face" [ref=e607] [cursor=pointer]:
+                          - /url: https://huggingface.co/funasr/paraformer-zh
+                        - text: ","
+                        - link "ModelScope" [ref=e608] [cursor=pointer]:
+                          - /url: https://www.modelscope.cn/models/iic/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-pytorch
+                      - cell [ref=e609]
+                    - row "Paraformer-zh-streaming speech-to-text Hugging Face, ModelScope Linux ✅, MacOS ✅" [ref=e610]:
+                      - cell "Paraformer-zh-streaming" [ref=e611]
+                      - cell "speech-to-text" [ref=e612]
+                      - cell "Hugging Face, ModelScope" [ref=e613]:
+                        - link "Hugging Face" [ref=e614] [cursor=pointer]:
+                          - /url: https://huggingface.co/funasr/paraformer-zh-streaming
+                        - text: ","
+                        - link "ModelScope" [ref=e615] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online
+                      - cell "Linux ✅, MacOS ✅" [ref=e616]
+                    - row "Paraformer-en speech-to-text Hugging Face, ModelScope" [ref=e617]:
+                      - cell "Paraformer-en" [ref=e618]
+                      - cell "speech-to-text" [ref=e619]
+                      - cell "Hugging Face, ModelScope" [ref=e620]:
+                        - link "Hugging Face" [ref=e621] [cursor=pointer]:
+                          - /url: https://huggingface.co/funasr/paraformer-en
+                        - text: ","
+                        - link "ModelScope" [ref=e622] [cursor=pointer]:
+                          - /url: https://www.modelscope.cn/models/iic/speech_paraformer-large-vad-punc_asr_nat-en-16k-common-vocab10020
+                      - cell [ref=e623]
+                    - row "Conformer-en speech-to-text Hugging Face, Modelscope" [ref=e624]:
+                      - cell "Conformer-en" [ref=e625]
+                      - cell "speech-to-text" [ref=e626]
+                      - cell "Hugging Face, Modelscope" [ref=e627]:
+                        - link "Hugging Face" [ref=e628] [cursor=pointer]:
+                          - /url: https://huggingface.co/funasr/conformer-en
+                        - text: ","
+                        - link "Modelscope" [ref=e629] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/speech_conformer_asr-en-16k-vocab4199-pytorch
+                      - cell [ref=e630]
+                    - row "SenseVoiceSmall speech-to-text Hugging Face, ModelScope Linux ✅, Windows ✅, MacOS ✅" [ref=e631]:
+                      - cell "SenseVoiceSmall" [ref=e632]
+                      - cell "speech-to-text" [ref=e633]
+                      - cell "Hugging Face, ModelScope" [ref=e634]:
+                        - link "Hugging Face" [ref=e635] [cursor=pointer]:
+                          - /url: https://huggingface.co/FunAudioLLM/SenseVoiceSmall
+                        - text: ","
+                        - link "ModelScope" [ref=e636] [cursor=pointer]:
+                          - /url: https://www.modelscope.cn/models/iic/SenseVoiceSmall
+                      - cell "Linux ✅, Windows ✅, MacOS ✅" [ref=e637]
+                    - row "Bark text-to-speech Hugging Face Linux ✅, Windows, MacOS ✅" [ref=e638]:
+                      - cell "Bark" [ref=e639]
+                      - cell "text-to-speech" [ref=e640]
+                      - cell "Hugging Face" [ref=e641]:
+                        - link "Hugging Face" [ref=e642] [cursor=pointer]:
+                          - /url: https://huggingface.co/suno/bark
+                      - cell "Linux ✅, Windows, MacOS ✅" [ref=e643]
+                    - row "Bark-small text-to-speech Hugging Face Linux ✅, Windows, MacOS ✅" [ref=e644]:
+                      - cell "Bark-small" [ref=e645]
+                      - cell "text-to-speech" [ref=e646]
+                      - cell "Hugging Face" [ref=e647]:
+                        - link "Hugging Face" [ref=e648] [cursor=pointer]:
+                          - /url: https://huggingface.co/suno/bark-small
+                      - cell "Linux ✅, Windows, MacOS ✅" [ref=e649]
+                    - row "CosyVoice2-0.5B text-to-speech Hugging Face, ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e650]:
+                      - cell "CosyVoice2-0.5B" [ref=e651]
+                      - cell "text-to-speech" [ref=e652]
+                      - cell "Hugging Face, ModelScope" [ref=e653]:
+                        - link "Hugging Face" [ref=e654] [cursor=pointer]:
+                          - /url: https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B
+                        - text: ","
+                        - link "ModelScope" [ref=e655] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/CosyVoice2-0.5B
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e656]
+                    - row "CosyVoice-300M-Instruct text-to-speech Hugging Face, ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e657]:
+                      - cell "CosyVoice-300M-Instruct" [ref=e658]
+                      - cell "text-to-speech" [ref=e659]
+                      - cell "Hugging Face, ModelScope" [ref=e660]:
+                        - link "Hugging Face" [ref=e661] [cursor=pointer]:
+                          - /url: https://huggingface.co/FunAudioLLM/CosyVoice-300M-Instruct
+                        - text: ","
+                        - link "ModelScope" [ref=e662] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/CosyVoice-300M-Instruct
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e663]
+                    - row "CosyVoice-300M-SFT text-to-speech Hugging Face, ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e664]:
+                      - cell "CosyVoice-300M-SFT" [ref=e665]
+                      - cell "text-to-speech" [ref=e666]
+                      - cell "Hugging Face, ModelScope" [ref=e667]:
+                        - link "Hugging Face" [ref=e668] [cursor=pointer]:
+                          - /url: https://huggingface.co/FunAudioLLM/CosyVoice-300M-SFT
+                        - text: ","
+                        - link "ModelScope" [ref=e669] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/CosyVoice-300M-SFT
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e670]
+                    - row "CosyVoice-300M text-to-speech Hugging Face, ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e671]:
+                      - cell "CosyVoice-300M" [ref=e672]
+                      - cell "text-to-speech" [ref=e673]
+                      - cell "Hugging Face, ModelScope" [ref=e674]:
+                        - link "Hugging Face" [ref=e675] [cursor=pointer]:
+                          - /url: https://huggingface.co/FunAudioLLM/CosyVoice-300M
+                        - text: ","
+                        - link "ModelScope" [ref=e676] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/CosyVoice-300M
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e677]
+                    - row "CosyVoice-300M-25Hz text-to-speech ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e678]:
+                      - cell "CosyVoice-300M-25Hz" [ref=e679]
+                      - cell "text-to-speech" [ref=e680]
+                      - cell "ModelScope" [ref=e681]:
+                        - link "ModelScope" [ref=e682] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/iic/CosyVoice-300M-25Hz
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e683]
+                    - row "Dia-1.6B text-to-speech Hugging Face, ModelScope Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e684]:
+                      - cell "Dia-1.6B" [ref=e685]
+                      - cell "text-to-speech" [ref=e686]
+                      - cell "Hugging Face, ModelScope" [ref=e687]:
+                        - link "Hugging Face" [ref=e688] [cursor=pointer]:
+                          - /url: https://huggingface.co/nari-labs/Dia-1.6B
+                        - text: ","
+                        - link "ModelScope" [ref=e689] [cursor=pointer]:
+                          - /url: https://modelscope.cn/models/nari-labs/Dia-1.6B
+                      - cell "Linux(ARM not supported) ✅, Windows(Not supported), macOS ✅" [ref=e690]
+                - generic [ref=e691]:
+                  - heading "Supported APIs" [level=2] [ref=e692]
+                  - 'link "Permalink: Supported APIs" [ref=e693] [cursor=pointer]':
+                    - /url: "#supported-apis"
+                    - img [ref=e694]
+                - generic [ref=e696]:
+                  - heading "Create speech" [level=3] [ref=e697]
+                  - 'link "Permalink: Create speech" [ref=e698] [cursor=pointer]':
+                    - /url: "#create-speech"
+                    - img [ref=e699]
+                - paragraph [ref=e701]:
+                  - strong [ref=e702]: Endpoint
+                  - text: ":"
+                  - code [ref=e703]: POST /v1/audio/speech
+                - paragraph [ref=e704]:
+                  - text: Generates audio from the input text. Compatible with the
+                  - link "OpenAI audio/speech API" [ref=e705] [cursor=pointer]:
+                    - /url: https://platform.openai.com/docs/api-reference/audio/createSpeech
+                  - text: .
+                - paragraph [ref=e706]:
+                  - strong [ref=e707]: Example Request
+                  - text: ":"
+                - generic [ref=e708]:
+                  - generic [ref=e709]:
+                    - text: curl http://localhost/v1/audio/speech \ -H
+                    - generic [ref=e710]: "\"Authorization: Bearer $OPENAI_API_KEY\""
+                    - text: \ -H
+                    - generic [ref=e711]: "\"Content-Type: application/json\""
+                    - text: \ -d
+                    - generic [ref=e712]: "'{"
+                    - text: "\"model\": \"cosyvoice\", \"input\": \"Hello world\", \"voice\": \"English Female\""
+                    - generic [ref=e713]: "}'"
+                    - text: \ --output speech.mp3
+                  - button "Copy" [ref=e715] [cursor=pointer]:
+                    - img [ref=e716]
+                - paragraph [ref=e719]:
+                  - strong [ref=e720]: Response
+                  - text: ": The audio file content."
+                - generic [ref=e721]:
+                  - heading "Create transcription" [level=3] [ref=e722]
+                  - 'link "Permalink: Create transcription" [ref=e723] [cursor=pointer]':
+                    - /url: "#create-transcription"
+                    - img [ref=e724]
+                - paragraph [ref=e726]:
+                  - strong [ref=e727]: Endpoint
+                  - text: ":"
+                  - code [ref=e728]: POST /v1/audio/transcriptions
+                - paragraph [ref=e729]:
+                  - text: Transcribes audio into the input language. Compatible with the
+                  - link "OpenAI audio/transcription API" [ref=e730] [cursor=pointer]:
+                    - /url: https://platform.openai.com/docs/api-reference/audio/createTranscription
+                  - text: .
+                - paragraph [ref=e731]:
+                  - strong [ref=e732]: Example Request
+                  - text: ":"
+                - generic [ref=e733]:
+                  - generic [ref=e734]:
+                    - text: curl https://localhost/v1/audio/transcriptions \ -H
+                    - generic [ref=e735]: "\"Authorization: Bearer $OPENAI_API_KEY\""
+                    - text: \ -H
+                    - generic [ref=e736]: "\"Content-Type: multipart/form-data\""
+                    - text: \ -F file=
+                    - generic [ref=e737]: "\"@/path/to/file/audio.mp3\""
+                    - text: \ -F model=
+                    - generic [ref=e738]: "\"whisper-large-v3\""
+                  - button "Copy" [ref=e740] [cursor=pointer]:
+                    - img [ref=e741]
+                - paragraph [ref=e744]:
+                  - strong [ref=e745]: Response
+                  - text: ":"
+                - generic [ref=e746]:
+                  - generic [ref=e747]:
+                    - text: "{ \"text\":"
+                    - generic [ref=e748]: "\"Hello world.\""
+                    - text: "}"
+                  - button "Copy" [ref=e750] [cursor=pointer]:
+                    - img [ref=e751]
+                - generic [ref=e754]:
+                  - heading "List Models" [level=3] [ref=e755]
+                  - 'link "Permalink: List Models" [ref=e756] [cursor=pointer]':
+                    - /url: "#list-models"
+                    - img [ref=e757]
+                - paragraph [ref=e759]:
+                  - strong [ref=e760]: Endpoint
+                  - text: ":"
+                  - code [ref=e761]: GET /v1/models
+                - paragraph [ref=e762]: Returns the current running models.
+                - generic [ref=e763]:
+                  - heading "Get Model" [level=3] [ref=e764]
+                  - 'link "Permalink: Get Model" [ref=e765] [cursor=pointer]':
+                    - /url: "#get-model"
+                    - img [ref=e766]
+                - paragraph [ref=e768]:
+                  - strong [ref=e769]: Endpoint
+                  - text: ":"
+                  - code [ref=e770]: "GET /v1/models/{model_id}"
+                - paragraph [ref=e771]: Returns the current running model.
+                - generic [ref=e772]:
+                  - heading "Get Voices" [level=3] [ref=e773]
+                  - 'link "Permalink: Get Voices" [ref=e774] [cursor=pointer]':
+                    - /url: "#get-voices"
+                    - img [ref=e775]
+                - paragraph [ref=e777]:
+                  - strong [ref=e778]: Endpoint
+                  - text: ":"
+                  - code [ref=e779]: GET /v1/voices
+                - paragraph [ref=e780]: Returns the supported voice for current running model.
+                - generic [ref=e781]:
+                  - heading "Health Check" [level=3] [ref=e782]
+                  - 'link "Permalink: Health Check" [ref=e783] [cursor=pointer]':
+                    - /url: "#health-check"
+                    - img [ref=e784]
+                - paragraph [ref=e786]:
+                  - strong [ref=e787]: Endpoint
+                  - text: ":"
+                  - code [ref=e788]: GET /health
+                - paragraph [ref=e789]: Returns the heath check result of the Vox Box.
+        - generic [ref=e793]:
+          - generic [ref=e796]:
+            - heading "About" [level=2] [ref=e797]
+            - paragraph [ref=e798]: A text-to-speech and speech-to-text server compatible with the OpenAI API, supporting Whisper, FunASR, Bark, and CosyVoice backends.
+            - heading "Topics" [level=3] [ref=e799]
+            - generic [ref=e801]:
+              - link "python" [ref=e802] [cursor=pointer]:
+                - /url: /topics/python
+              - link "text-to-speech" [ref=e803] [cursor=pointer]:
+                - /url: /topics/text-to-speech
+              - link "tts" [ref=e804] [cursor=pointer]:
+                - /url: /topics/tts
+              - link "speech-to-text" [ref=e805] [cursor=pointer]:
+                - /url: /topics/speech-to-text
+              - link "stt" [ref=e806] [cursor=pointer]:
+                - /url: /topics/stt
+              - link "audio-processing" [ref=e807] [cursor=pointer]:
+                - /url: /topics/audio-processing
+              - link "asr" [ref=e808] [cursor=pointer]:
+                - /url: /topics/asr
+              - link "openai-compatible-api" [ref=e809] [cursor=pointer]:
+                - /url: /topics/openai-compatible-api
+            - heading "Resources" [level=3] [ref=e810]
+            - link "Readme" [ref=e812] [cursor=pointer]:
+              - /url: "#readme-ov-file"
+              - img [ref=e813]
+              - text: Readme
+            - heading "License" [level=3] [ref=e815]
+            - link "Apache-2.0 license" [ref=e817] [cursor=pointer]:
+              - /url: "#Apache-2.0-1-ov-file"
+              - img [ref=e818]
+              - text: Apache-2.0 license
+            - heading "Code of conduct" [level=3] [ref=e820]
+            - link "Code of conduct" [ref=e822] [cursor=pointer]:
+              - /url: "#coc-ov-file"
+              - img [ref=e823]
+              - text: Code of conduct
+            - heading "Contributing" [level=3] [ref=e825]
+            - link "Contributing" [ref=e827] [cursor=pointer]:
+              - /url: "#contributing-ov-file"
+              - img [ref=e828]
+              - text: Contributing
+            - heading "Security policy" [level=3] [ref=e830]
+            - link "Security policy" [ref=e832] [cursor=pointer]:
+              - /url: "#security-ov-file"
+              - img [ref=e833]
+              - text: Security policy
+            - link "Activity" [ref=e836] [cursor=pointer]:
+              - /url: /gpustack/vox-box/activity
+              - img [ref=e837]
+              - text: Activity
+            - link "Custom properties" [ref=e840] [cursor=pointer]:
+              - /url: /gpustack/vox-box/custom-properties
+              - img [ref=e841]
+              - text: Custom properties
+            - heading "Stars" [level=3] [ref=e843]
+            - link "206 stars" [ref=e845] [cursor=pointer]:
+              - /url: /gpustack/vox-box/stargazers
+              - img [ref=e846]
+              - strong [ref=e848]: "206"
+              - text: stars
+            - heading "Watchers" [level=3] [ref=e849]
+            - link "7 watching" [ref=e851] [cursor=pointer]:
+              - /url: /gpustack/vox-box/watchers
+              - img [ref=e852]
+              - strong [ref=e854]: "7"
+              - text: watching
+            - heading "Forks" [level=3] [ref=e855]
+            - link "33 forks" [ref=e857] [cursor=pointer]:
+              - /url: /gpustack/vox-box/forks
+              - img [ref=e858]
+              - strong [ref=e860]: "33"
+              - text: forks
+            - link "Report repository" [ref=e862] [cursor=pointer]:
+              - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fgpustack%2Fvox-box&report=gpustack+%28user%29
+          - generic [ref=e864]:
+            - heading "Releases 21" [level=2] [ref=e865]:
+              - link "Releases 21" [ref=e866] [cursor=pointer]:
+                - /url: /gpustack/vox-box/releases
+                - text: Releases
+                - generic "21" [ref=e867]
+            - link "v0.0.21 Latest Dec 23, 2025on Dec 23, 2025" [ref=e868] [cursor=pointer]:
+              - /url: /gpustack/vox-box/releases/tag/v0.0.21
+              - img [ref=e869]
+              - generic [ref=e871]:
+                - generic [ref=e872]:
+                  - generic [ref=e873]: v0.0.21
+                  - 'generic "Label: Latest" [ref=e874]': Latest
+                - generic [ref=e875]: Dec 23, 2025on Dec 23, 2025
+            - link "+ 20 releases" [ref=e877] [cursor=pointer]:
+              - /url: /gpustack/vox-box/releases
+          - generic [ref=e879]:
+            - heading "Packages" [level=2] [ref=e880]:
+              - link "Packages" [ref=e881] [cursor=pointer]:
+                - /url: /orgs/gpustack/packages?repo_name=vox-box
+            - generic [ref=e882]: No packages published
+          - generic [ref=e884]:
+            - heading "Contributors 6" [level=2] [ref=e885]:
+              - link "Contributors 6" [ref=e886] [cursor=pointer]:
+                - /url: /gpustack/vox-box/graphs/contributors
+                - text: Contributors
+                - generic "6" [ref=e887]
+            - list [ref=e888]:
+              - listitem [ref=e889]:
+                - link "@aiwantaozi" [ref=e890] [cursor=pointer]:
+                  - /url: https://github.com/aiwantaozi
+                  - img "@aiwantaozi" [ref=e891]
+              - listitem [ref=e892]:
+                - link "@gitlawr" [ref=e893] [cursor=pointer]:
+                  - /url: https://github.com/gitlawr
+                  - img "@gitlawr" [ref=e894]
+              - listitem [ref=e895]:
+                - link "@kb5000" [ref=e896] [cursor=pointer]:
+                  - /url: https://github.com/kb5000
+                  - img "@kb5000" [ref=e897]
+              - listitem [ref=e898]:
+                - link "@lemisky" [ref=e899] [cursor=pointer]:
+                  - /url: https://github.com/lemisky
+                  - img "@lemisky" [ref=e900]
+              - listitem [ref=e901]:
+                - link "@dependabot[bot]" [ref=e902] [cursor=pointer]:
+                  - /url: https://github.com/apps/dependabot
+                  - img "@dependabot[bot]" [ref=e903]
+              - listitem [ref=e904]:
+                - link "@yxf0314" [ref=e905] [cursor=pointer]:
+                  - /url: https://github.com/yxf0314
+                  - img "@yxf0314" [ref=e906]
+          - generic [ref=e908]:
+            - heading "Languages" [level=2] [ref=e909]
+            - list [ref=e916]:
+              - listitem [ref=e917]:
+                - link "Python 73.0%" [ref=e918] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/search?l=python
+                  - img [ref=e919]
+                  - generic [ref=e921]: Python
+                  - generic [ref=e922]: 73.0%
+              - listitem [ref=e923]:
+                - link "PowerShell 13.5%" [ref=e924] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/search?l=powershell
+                  - img [ref=e925]
+                  - generic [ref=e927]: PowerShell
+                  - generic [ref=e928]: 13.5%
+              - listitem [ref=e929]:
+                - link "Shell 11.9%" [ref=e930] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/search?l=shell
+                  - img [ref=e931]
+                  - generic [ref=e933]: Shell
+                  - generic [ref=e934]: 11.9%
+              - listitem [ref=e935]:
+                - link "Makefile 1.6%" [ref=e936] [cursor=pointer]:
+                  - /url: /gpustack/vox-box/search?l=makefile
+                  - img [ref=e937]
+                  - generic [ref=e939]: Makefile
+                  - generic [ref=e940]: 1.6%
+  - contentinfo [ref=e942]:
+    - heading "Footer" [level=2] [ref=e943]
+    - generic [ref=e944]:
+      - generic [ref=e945]:
+        - link "GitHub Homepage" [ref=e946] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e947]
+        - generic [ref=e949]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e950]:
+        - heading "Footer navigation" [level=3] [ref=e951]
+        - list "Footer navigation" [ref=e952]:
+          - listitem [ref=e953]:
+            - link "Terms" [ref=e954] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e955]:
+            - link "Privacy" [ref=e956] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e957]:
+            - link "Security" [ref=e958] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e959]:
+            - link "Status" [ref=e960] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e961]:
+            - link "Community" [ref=e962] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e963]:
+            - link "Docs" [ref=e964] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e965]:
+            - link "Contact" [ref=e966] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e967]:
+            - button "Manage cookies" [ref=e969] [cursor=pointer]
+          - listitem [ref=e970]:
+            - button "Do not share my personal information" [ref=e972] [cursor=pointer]

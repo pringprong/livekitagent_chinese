@@ -4,7 +4,8 @@ WORKDIR /app
 FROM base AS deps
 RUN corepack enable
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/root/.pnpm-store \
+    pnpm install --frozen-lockfile
 
 FROM base AS build
 RUN corepack enable
@@ -14,7 +15,8 @@ ENV LIVEKIT_URL=http://livekit:7880 \
     LIVEKIT_API_KEY=devkey \
     LIVEKIT_API_SECRET=secret \
     NEXT_PUBLIC_LIVEKIT_URL=http://localhost:7880
-RUN pnpm run build
+RUN --mount=type=cache,id=next-build,target=/app/.next/cache \
+    pnpm run build
 
 FROM base AS runner
 ENV NODE_ENV=production

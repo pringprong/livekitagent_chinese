@@ -4,8 +4,9 @@ FROM ${WHISPER_BASE}
 
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN --mount=type=cache,id=whisper,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,id=whisper,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
     curl \
@@ -18,7 +19,8 @@ RUN apt-get update && \
     fi \
     && rm -rf /var/lib/apt/lists/*
 
-RUN --mount=type=cache,target=/root/.cache/pip \
+RUN --mount=type=cache,id=whisper,target=/root/.cache/pip \
+    --mount=type=cache,id=whisper-hf,target=/root/.cache/huggingface \
     python3 -m pip install --upgrade pip "setuptools<82.0.0" wheel \
     && python3 -m pip install --no-build-isolation vox-box
 

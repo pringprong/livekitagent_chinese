@@ -1,7 +1,9 @@
 # Build llama-server for native ARM64 support (Apple Silicon)
 FROM debian:bookworm-slim AS build
 
-RUN apt-get update && apt-get install -y \
+RUN --mount=type=cache,id=llama,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,id=llama,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y  \
     build-essential \
     cmake \
     curl \
@@ -22,7 +24,9 @@ RUN cmake -B build \
 # Runtime image
 FROM debian:bookworm-slim
 
-RUN apt-get update && apt-get install -y \
+RUN --mount=type=cache,id=llama,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,id=llama,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y \
     libcurl4 \
     libgomp1 \
     curl \

@@ -25,7 +25,9 @@ RUN adduser \
 # gcc: C compiler needed for building Python packages with C extensions
 # python3-dev: Python development headers needed for compilation
 # We clean up the apt cache after installation to keep the image size down
-RUN apt-get update && apt-get install -y \
+RUN --mount=type=cache,id=livekit_agent,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,id=livekit_agent,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y \
     gcc \
     g++ \
     libglib2.0-0 \
@@ -39,6 +41,9 @@ WORKDIR /app
 # Copy just the dependency files first, for more efficient layer caching
 COPY pyproject.toml uv.lock ./
 RUN mkdir -p src
+
+# Set UV environment variables to prevent network timeouts during build
+ENV UV_HTTP_TIMEOUT=300
 
 # Install Python dependencies using UV's lock file
 # --locked ensures we use exact versions from uv.lock for reproducible builds

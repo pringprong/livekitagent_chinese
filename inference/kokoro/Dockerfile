@@ -5,13 +5,14 @@ FROM ${KOKORO_BASE}
 WORKDIR /app
 
 # Install system dependencies - handle both Python slim and CUDA base images
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN --mount=type=cache,id=kokoro,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,id=kokoro,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get install -y --no-install-recommends \
     git \
     build-essential \
     curl \
     ffmpeg \
-    && apt-get install -y --no-install-recommends espeak-ng \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends espeak-ng 
 
 # If using CUDA base image (no Python), install Python
 RUN if ! command -v python3 >/dev/null 2>&1; then \
@@ -27,8 +28,9 @@ RUN git clone https://github.com/hexgrad/kokoro.git .
 COPY kokoro_server.py .
 
 # Install Python dependencies including misaki for English and Chinese
-RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    python3 -m pip install --no-cache-dir \
+RUN --mount=type=cache,id=kokoro,target=/root/.cache/pip \
+    python3 -m pip install --upgrade pip setuptools wheel && \
+    python3 -m pip install \
     torch \
     numpy \
     scipy \
@@ -38,10 +40,12 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel && \
     huggingface-hub \
     pydub \
     "kokoro>=0.9.4" \
-    "misaki[en,zh]"
+    "misaki[en,zh]" \ 
+    --resume-retries 20
 
 # Download the model from Hugging Face
-RUN python3 -c "from huggingface_hub import snapshot_download; snapshot_download('hexgrad/Kokoro-82M')"
+RUN --mount=type=cache,id=kokoro,target=/root/.cache/huggingface \
+    python3 -c "from huggingface_hub import snapshot_download; snapshot_download('hexgrad/Kokoro-82M')"
 
 # Expose the API port
 EXPOSE 8880

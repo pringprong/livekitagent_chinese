@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__livekit-docs__docs_search"
+    ]
+  }
+}
