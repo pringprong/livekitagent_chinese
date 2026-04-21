@@ -21,8 +21,15 @@ RUN if ! command -v python3 >/dev/null 2>&1; then \
         rm -rf /var/lib/apt/lists/*; \
     fi
 
-# Clone Kokoro from GitHub
-RUN git clone https://github.com/hexgrad/kokoro.git .
+# Clone Kokoro from GitHub with network-resilient retries
+RUN --mount=type=cache,id=kokoro-git,target=/root/.cache/git \
+    git config --global http.lowSpeedLimit 0 && \
+    git config --global http.lowSpeedTime 999999 && \
+    for i in 1 2 3 4 5; do \
+      git clone --depth 1 --shallow-submodules https://github.com/hexgrad/kokoro.git . && break; \
+      echo "git clone failed, retrying ($i/5)"; \
+      sleep 5; \
+    done
 
 # Copy the FastAPI wrapper from host
 COPY kokoro_server.py .
