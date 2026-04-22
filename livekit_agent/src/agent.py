@@ -24,14 +24,19 @@ load_dotenv(".env.local")
 class Assistant(Agent):
     def __init__(self) -> None:
         self.language: str = "en"  # Default language is English
+        self.voice: str = "af_heart"  # Default voice for English
         super().__init__(
             instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
             You eagerly assist users with their questions by providing information from your extensive knowledge.
             Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
             You are curious, friendly, and have a sense of humor.
             
-            Available language codes: en (English), zh (Chinese).
-            You can change the language by saying "English" or "英文" for English, or "Chinese" or "中文" for Chinese.""",
+            You can speak in both English and Chinese. The system automatically detects the language from the text content and uses the appropriate voice:
+            - English text uses the af_heart voice (American English female)
+            - Chinese text uses the zf_xiaobei voice (Mandarin Chinese female)
+            
+            Available language codes for STT: en (English), zh (Chinese).
+            You can change the STT language by saying "English" or "英文" for English, or "Chinese" or "中文" for Chinese.""",
         )
 
     @function_tool()
@@ -62,10 +67,12 @@ class Assistant(Agent):
         context: RunContext,
         language: str,
     ) -> str:
-        """Set the language for speech recognition.
+        """Set the language for speech recognition (STT).
+        
+        Note: Text-to-speech (TTS) automatically detects language from text content and uses appropriate voices.
         
         Args:
-            language: The language code to set. Use "en" for English or "zh" for Chinese.
+            language: The language code to set for STT. Use "en" for English or "zh" for Chinese.
         """
         # Update the agent's language
         self.language = language
@@ -78,7 +85,7 @@ class Assistant(Agent):
                 stt.update_options(language=language)
         
         language_name = "English" if language == "en" else "Chinese"
-        return f"Language set to {language_name} ({language})."
+        return f"Speech recognition language set to {language_name} ({language}). TTS automatically detects language from text."
 
 server = AgentServer()
 

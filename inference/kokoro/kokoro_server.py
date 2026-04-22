@@ -4,9 +4,17 @@ Kokoro-82M FastAPI server with OpenAI TTS compatibility.
 Supports both English and Mandarin Chinese voices.
 """
 
+import os
 import io
 import logging
 from typing import Optional
+import sys
+
+# Set HuggingFace cache environment variables before importing kokoro
+os.environ.setdefault('HF_HOME', '/root/.cache/huggingface')
+os.environ['HF_HUB_DISABLE_PROGRESS_BARS'] = '1'
+os.environ['HF_HUB_OFFLINE'] = '1'
+os.environ['TRANSFORMERS_OFFLINE'] = '1'
 
 import torch
 from fastapi import FastAPI, HTTPException
@@ -29,48 +37,42 @@ def get_pipeline(lang_code: str) -> KPipeline:
     if lang_code not in _pipelines:
         try:
             logger.info(f"Loading Kokoro pipeline for language: {lang_code}")
+            # Use default repo_id but rely on offline mode and local cache
             _pipelines[lang_code] = KPipeline(lang_code=lang_code)
         except Exception as e:
             logger.error(f"Failed to load pipeline for {lang_code}: {e}")
             raise
     return _pipelines[lang_code]
 
-def detect_language_from_voice(voice: str) -> str:
-    """Detect language from voice name.
+def detect_language_from_text(text: str) -> str:
+    """Detect language from text content using simple heuristics."""
+    # Chinese character ranges
+    chinese_chars = 0
+    total_chars = 0
     
-    Voice naming convention:
-    - af_*, am_*, bf_*, bm_* => English (a=US, b=UK)
-    - zf_*, zm_* => Mandarin Chinese
-    - jf_*, jm_* => Japanese
-    - ef_*, em_* => Spanish
-    - ff_* => French
-    - hf_*, hm_* => Hindi
-    - if_*, im_* => Italian
-    - pf_*, pm_* => Portuguese
-    """
-    prefix = voice[:2]
+    for char in text:
+        if '\u4e00' <= char <= '\u9fff':  # CJK Unified Ideographs
+            chinese_chars += 1
+        if char.isalnum():  # Count alphanumeric characters
+            total_chars += 1
     
-    language_map = {
-        'af': 'a',  # US English female
-        'am': 'a',  # US English male
-        'bf': 'b',  # UK English female
-        'bm': 'b',  # UK English male
-        'zf': 'z',  # Mandarin female
-        'zm': 'z',  # Mandarin male
-        'jf': 'j',  # Japanese female
-        'jm': 'j',  # Japanese male
-        'ef': 'e',  # Spanish female
-        'em': 'e',  # Spanish male
-        'ff': 'f',  # French female
-        'hf': 'h',  # Hindi female
-        'hm': 'h',  # Hindi male
-        'if': 'i',  # Italian female
-        'im': 'i',  # Italian male
-        'pf': 'p',  # Portuguese female
-        'pm': 'p',  # Portuguese male
-    }
-    
-    return language_map.get(prefix, 'a')  # Default to English
+    # If more than 30% of alphanumeric characters are Chinese, consider it Chinese
+    if total_chars > 0 and (chinese_chars / total_chars) > 0.3:
+        return 'z'
+    return 'a'
+
+def get_voice_for_language(language: str, current_voice: str = None) -> str:
+    """Get appropriate voice for the detected language."""
+    if language == 'z':
+        # Use Chinese voice if current voice is not already Chinese
+        if current_voice and current_voice.startswith('z'):
+            return current_voice
+        return 'zf_xiaobei'  # Default Chinese voice
+    else:
+        # Use English voice if current voice is not already English
+        if current_voice and (current_voice.startswith('a') or current_voice.startswith('b')):
+            return current_voice
+        return 'af_heart'  # Default English voice
 
 class TTSRequest(BaseModel):
     """OpenAI-compatible TTS request."""
@@ -109,9 +111,16 @@ async def text_to_speech(request: TTSRequest):
         if not request.input or not request.input.strip():
             raise HTTPException(status_code=400, detail="Input text cannot be empty")
         
-        # Detect language from voice
-        lang_code = detect_language_from_voice(request.voice)
-        logger.info(f"TTS: voice={request.voice}, lang={lang_code}, input_len={len(request.input)}")
+        # Detect language from text content
+        detected_language = detect_language_from_text(request.input)
+        
+        # Choose appropriate voice based on detected language
+        voice_to_use = get_voice_for_language(detected_language, request.voice)
+        
+        # Detect language from voice (for pipeline selection)
+        #lang_code = detect_language_from_text(voice_to_use)
+        lang_code = 'z' if voice_to_use.startswith('z') else 'a'
+        logger.info(f"TTS: input_lang={detected_language}, voice={voice_to_use}, pipeline_lang={lang_code}, input_len={len(request.input)}")
         
         # Get pipeline for detected language
         pipeline = get_pipeline(lang_code)
@@ -119,7 +128,7 @@ async def text_to_speech(request: TTSRequest):
         # Generate speech - concatenate all chunks
         audio_chunks = []
         for i, (graphemes, phonemes, audio) in enumerate(
-            pipeline(request.input, voice=request.voice, speed=request.speed)
+            pipeline(request.input, voice=voice_to_use, speed=request.speed)
         ):
             logger.debug(f"Generated chunk {i}: graphemes={graphemes}, phonemes={phonemes}")
             audio_chunks.append(audio)

@@ -27,7 +27,7 @@ RUN --mount=type=cache,id=kokoro-git,target=/root/.cache/git \
     git config --global http.lowSpeedTime 999999 && \
     for i in 1 2 3 4 5; do \
       git clone --depth 1 --shallow-submodules https://github.com/hexgrad/kokoro.git . && break; \
-      echo "git clone failed, retrying ($i/5)"; \
+      echo "git clone failed, retrying (\50/5)"; \
       sleep 5; \
     done
 
@@ -47,15 +47,24 @@ RUN --mount=type=cache,id=kokoro,target=/root/.cache/pip \
     huggingface-hub \
     pydub \
     "kokoro>=0.9.4" \
-    "misaki[en,zh]" \ 
+    "misaki[en,zh]" \
     --resume-retries 20
 
-# Download the model from Hugging Face
+# Download spacy language model for offline use
+RUN python3 -m spacy download en_core_web_sm
+
+# Download the model from Hugging Face and prepare offline cache
 RUN --mount=type=cache,id=kokoro,target=/root/.cache/huggingface \
-    python3 -c "from huggingface_hub import snapshot_download; snapshot_download('hexgrad/Kokoro-82M')"
+    HF_HUB_OFFLINE=0 python3 -c "from huggingface_hub import snapshot_download; snapshot_download('hexgrad/Kokoro-82M')" && \
+    ls -la /root/.cache/huggingface/hub/ 2>/dev/null || echo "No cached models found"
+
+# Set environment variables for offline mode
+ENV HF_HUB_DISABLE_PROGRESS_BARS=1
+ENV HF_HUB_OFFLINE=1
+ENV TRANSFORMERS_OFFLINE=1
 
 # Expose the API port
 EXPOSE 8880
 
-# Start FastAPI server
-CMD ["python3", "-m", "uvicorn", "kokoro_server:app", "--host", "0.0.0.0", "--port", "8880"]
+# Run the server
+CMD ["python3", "kokoro_server.py"]
