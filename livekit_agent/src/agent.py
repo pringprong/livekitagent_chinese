@@ -23,13 +23,15 @@ load_dotenv(".env.local")
 
 class Assistant(Agent):
     def __init__(self) -> None:
-        self.language: str = "en"  # Default language is English
-        self.voice: str = "af_heart"  # Default voice for English
+        self.language: str = "zh"  # Default language is Chinese
+        self.voice: str = "zf_xiaobei"  # Default voice for Chinese
         super().__init__(
-            instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
-            You eagerly assist users with their questions by providing information from your extensive knowledge.
-            Your responses are use simple language without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, and have a sense of humor.""",
+            instructions="""You are a helpful voice AI Chinese tutor. The user is interacting with you via voice, even if you perceive the conversation as text.
+            You are teaching a beginner Chinese language student (who speaks English natively) to speak and understand Chinese.  
+            Always respond in Chinese, even if the user speaks to you in English, unless the user explicitly asks you to switch to English.
+            Only use simple Chinese phrases and don't say more than 3 sentences in a row before pausing and asking whether the user is ready to continue.
+            Provide a short definition, short English translation, and write the pinyin whenever the user repeats a word or phrase that you already used.
+            You are friendly and have a sense of humor.""",
         )
 
     @function_tool()
@@ -37,7 +39,6 @@ class Assistant(Agent):
         """Get the current date and time."""
         return f"The current date and time is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}."    
     
-
     @function_tool()
     async def multiply_numbers(
         self,
@@ -116,7 +117,7 @@ async def my_agent(ctx: JobContext):
             base_url=stt_base_url,
             # base_url="http://localhost:11435/v1", # uncomment for local testing
             model=stt_model,
-            language="en",  # Default language
+            language="zh",  # Default language
             detect_language=False,  # Disable automatic detection, use the language variable
             api_key=stt_api_key
         ),
@@ -130,7 +131,7 @@ async def my_agent(ctx: JobContext):
             base_url="http://kokoro:8880/v1",
             # base_url="http://localhost:8880/v1", # uncomment for local testing
             model="kokoro",
-            voice="af_heart",
+            voice="zf_xiaobei",
             api_key="no-key-needed"
         ),
         turn_detection=MultilingualModel(),

@@ -78,7 +78,7 @@ class TTSRequest(BaseModel):
     """OpenAI-compatible TTS request."""
     input: str
     model: str = "kokoro"
-    voice: str = "af_heart"
+    voice: str = "zf_xiaobei"  # Default voice, can be overridden by language detection
     response_format: str = "mp3"
     speed: float = 1.0
 
