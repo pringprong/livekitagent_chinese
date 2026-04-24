@@ -28,15 +28,8 @@ class Assistant(Agent):
         super().__init__(
             instructions="""You are a helpful voice AI assistant. The user is interacting with you via voice, even if you perceive the conversation as text.
             You eagerly assist users with their questions by providing information from your extensive knowledge.
-            Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, and have a sense of humor.
-            
-            You can speak in both English and Chinese. The system automatically detects the language from the text content and uses the appropriate voice:
-            - English text uses the af_heart voice (American English female)
-            - Chinese text uses the zf_xiaobei voice (Mandarin Chinese female)
-            
-            Available language codes for STT: en (English), zh (Chinese).
-            You can change the STT language by saying "English" or "英文" for English, or "Chinese" or "中文" for Chinese.""",
+            Your responses are use simple language without any complex formatting or punctuation including emojis, asterisks, or other symbols.
+            You are curious, friendly, and have a sense of humor.""",
         )
 
     @function_tool()
