@@ -56,8 +56,8 @@ def detect_language_from_text(text: str) -> str:
         if char.isalnum():  # Count alphanumeric characters
             total_chars += 1
     
-    # If more than 30% of alphanumeric characters are Chinese, consider it Chinese
-    if total_chars > 0 and (chinese_chars / total_chars) > 0.3:
+    # If more than 5% of alphanumeric characters are Chinese, consider it Chinese
+    if total_chars > 0 and (chinese_chars / total_chars) > 0.05:
         return 'z'
     return 'a'
 
