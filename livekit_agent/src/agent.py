@@ -28,66 +28,66 @@ load_dotenv(".env.local")
 
 class Assistant(Agent):
     def __init__(self) -> None:
-        self.language: str = "zh"  # Default language is Chinese
-        self.voice: str = "zf_xiaobei"  # Default voice for Chinese
+        #self.language: str = "zh"  # Default language is Chinese
+        #self.voice: str = "zf_xiaobei"  # Default voice for Chinese
         self._latest_frame = None
         self._video_stream = None
         self._tasks = []
         super().__init__(
-            instructions="""You are a helpful voice AI Chinese tutor. The user is interacting with you via voice, even if you perceive the conversation as text.
-            You are teaching a beginner Chinese language student (who speaks English natively) to speak and understand Chinese.  
-            Always respond in Chinese, even if the user speaks to you in English, unless the user explicitly asks you to switch to English.
-            Only use simple Chinese phrases and don't say more than 3 sentences in a row before pausing and asking whether the user is ready to continue.
-            Provide a short definition, short English translation, and write the pinyin whenever the user repeats a word or phrase that you already used.
-            You are friendly and have a sense of humor.""",
+            instructions="""You are a helpful Chinese reading and app navigation tutor for a beginner Chinese language student. 
+            The user is interacting with you via voice, even if you perceive the conversation as text, and via images of books, apps, and other visual content.
+            When you receive an image, read the text in the image word-for-word out loud and provide a simple definition in Simplified Chinese for any advanced words.
+            Whenever the user repeats a word or phrase that you already used, provide a short definition, short English translation in parentheses, and write the pinyin.
+            If you don't understand what the user just said, then simply read the text from the next image out loud and provide a definition for any advanced words in Simplified Chinese.
+            Do not include any dashes, asterisks, or HTML tags in your responses.""",
         )
 
-    @function_tool()
-    async def get_current_date_and_time(self, context: RunContext) -> str:
-        """Get the current date and time."""
-        return f"The current date and time is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}."    
+    # @function_tool()
+    # async def get_current_date_and_time(self, context: RunContext) -> str:
+    #     """Get the current date and time."""
+    #     return f"The current date and time is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}."    
     
-    @function_tool()
-    async def multiply_numbers(
-        self,
-        context: RunContext,
-        number1: int,
-        number2: int,
-    ) -> dict[str, Any]:
-        """Multiply two numbers.
+    # @function_tool()
+    # async def multiply_numbers(
+    #     self,
+    #     context: RunContext,
+    #     number1: int,
+    #     number2: int,
+    # ) -> dict[str, Any]:
+    #     """Multiply two numbers.
         
-        Args:
-            number1: The first number to multiply.
-            number2: The second number to multiply.
-        """
+    #     Args:
+    #         number1: The first number to multiply.
+    #         number2: The second number to multiply.
+    #     """
 
-        return f"The product of {number1} and {number2} is {number1 * number2}."
+    #     return f"The product of {number1} and {number2} is {number1 * number2}."
 
-    @function_tool()
-    async def set_language(
-        self,
-        context: RunContext,
-        language: str,
-    ) -> str:
-        """Set the language for speech recognition (STT).
+    # @function_tool()
+    # async def set_language(
+    #     self,
+    #     context: RunContext,
+    #     language: str,
+    # ) -> str:
+    #     """Set the language for speech recognition (STT).
         
-        Note: Text-to-speech (TTS) automatically detects language from text content and uses appropriate voices.
+    #     Note: Text-to-speech (TTS) automatically detects language from text content and uses appropriate voices.
         
-        Args:
-            language: The language code to set for STT. Use "en" for English or "zh" for Chinese.
-        """
-        # Update the agent's language
-        self.language = language
+    #     Args:
+    #         language: The language code to set for STT. Use "en" for English or "zh" for Chinese.
+    #     """
+    #     # Update the agent's language
+    #     self.language = language
         
-        # Update the STT language dynamically
-        session = context.agent.session
-        if session and hasattr(session, '_stt') and session._stt:
-            stt = session._stt
-            if hasattr(stt, 'update_options'):
-                stt.update_options(language=language)
+    #     # Update the STT language dynamically
+    #     session = context.agent.session
+    #     if session and hasattr(session, '_stt') and session._stt:
+    #         stt = session._stt
+    #         if hasattr(stt, 'update_options'):
+    #             stt.update_options(language=language)
         
-        language_name = "English" if language == "en" else "Chinese"
-        return f"Speech recognition language set to {language_name} ({language}). TTS automatically detects language from text."
+    #     language_name = "English" if language == "en" else "Chinese"
+    #     return f"Speech recognition language set to {language_name} ({language}). TTS automatically detects language from text."
 
     async def on_enter(self):
             room = get_job_context().room
