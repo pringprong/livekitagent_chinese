@@ -36,9 +36,8 @@ class Assistant(Agent):
         super().__init__(
             instructions="""You are a helpful Chinese reading and app navigation tutor for a beginner Chinese language student. 
             The user is interacting with you via voice, even if you perceive the conversation as text, and via images of books, apps, and other visual content.
-            When you receive an image, read the text in the image word-for-word out loud and provide a simple definition in Simplified Chinese for any advanced words.
-            Whenever the user repeats a word or phrase that you already used, provide a short definition, short English translation in parentheses, and write the pinyin.
-            If you don't understand what the user just said, then simply read the text from the next image out loud and provide a definition for any advanced words in Simplified Chinese.
+            When you receive an image, and the user says “给我读书”， “读书”， “继续”， “继续读书”, "continue reading", or you don't understand what the user said, read the text in the image word-for-word out loud, do not paraphrase.
+            Whenever the user repeats a word or phrase that you already used, provide a short definition, short English translation in parentheses, and write the pinyin with accents.
             Do not include any dashes, asterisks, or HTML tags in your responses.""",
         )
 
@@ -145,7 +144,7 @@ async def my_agent(ctx: JobContext):
         "room": ctx.room.name,
     }
 
-    llama_model = os.getenv("LLAMA_MODEL", "qwen3-4b")
+    llama_model = os.getenv("LLAMA_MODEL", "qwen3-9b")
     llama_base_url = os.getenv("LLAMA_BASE_URL", "http://llama_cpp:11434/v1")
 
     stt_provider = os.getenv("STT_PROVIDER", "whisper").lower()
